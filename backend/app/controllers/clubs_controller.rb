@@ -6,6 +6,8 @@ class ClubsController < ApplicationController
 
     def create
 
+        clubs = Club.new 
+
     end 
 
 
