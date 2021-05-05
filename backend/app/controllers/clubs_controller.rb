@@ -1,22 +1,28 @@
 class ClubsController < ApplicationController
 
     def index 
-   clubs = Club.all 
+   @club = Club.all 
+   
     end
 
-    def create
 
-        clubs = Club.new 
+
+    def show 
+   @club = Club.find_by(id: params[:id])
+    end 
+
+    def new
+
+        @club = Club.new 
 
     end 
 
-
-    def new 
-
-    end
 
     def delete
 
-    end 
+        @club = Club.find_by(id: params[:id])
+        @club.destroy
+
+    end
 
 end
