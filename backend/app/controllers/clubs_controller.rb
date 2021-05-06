@@ -2,6 +2,7 @@ class ClubsController < ApplicationController
 
     def index 
    @club = Club.all 
+   render ({json: Club.all})
    
     end
 

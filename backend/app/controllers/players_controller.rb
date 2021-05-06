@@ -6,6 +6,12 @@ class PlayersController < ApplicationController
 
 
 
+    def index
+
+        @player = Player.all 
+        render ({json: Player.all})
+    end 
+
     def show 
         
      @player = Player.find_by(id: params[:id])
