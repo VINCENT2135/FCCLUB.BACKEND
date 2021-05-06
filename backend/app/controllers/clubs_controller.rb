@@ -1,8 +1,8 @@
 class ClubsController < ApplicationController
 
     def index 
-   @club = Club.all 
-   render ({json: Club.all})
+ render json: Club.all, key_tranform: :camel_lower
+ 
    
     end
 
