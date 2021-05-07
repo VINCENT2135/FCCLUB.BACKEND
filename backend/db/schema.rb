@@ -13,11 +13,13 @@
 ActiveRecord::Schema.define(version: 2021_05_04_174142) do
 
   create_table "clubs", force: :cascade do |t|
+    t.string "clubname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "players", force: :cascade do |t|
+    t.string "playername"
     t.integer "Club_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
