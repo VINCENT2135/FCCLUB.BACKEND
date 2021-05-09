@@ -11,13 +11,13 @@ class ClubsController < ApplicationController
     end
     
     def create
-     # binding.pry
+  
       club=Club.create(club_params)
       render json: club
     end
     
     def destroy
-     # binding.pry
+   
       club = Club.find_by(id: params[:id])
       club.destroy
       render json: {message:"success!"}
